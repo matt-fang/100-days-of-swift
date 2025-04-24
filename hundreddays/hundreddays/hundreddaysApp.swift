@@ -11,7 +11,7 @@ import SwiftUI
 struct hundreddaysApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MoneySharerView()
         }
     }
 }
