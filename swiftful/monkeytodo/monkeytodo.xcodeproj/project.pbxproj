@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A55D1D052DF8D3D80040CD2A /* NoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D1D042DF8D3D50040CD2A /* NoItemsView.swift */; };
 		A5F9BC672DF7E24900100E9A /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9BC602DF7E24900100E9A /* AddTaskView.swift */; };
 		A5F9BC682DF7E24900100E9A /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9BC612DF7E24900100E9A /* ListRowView.swift */; };
 		A5F9BC692DF7E24900100E9A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9BC622DF7E24900100E9A /* ListView.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A55D1D042DF8D3D50040CD2A /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
 		A5D780332DF6B3EA00E8E5D4 /* monkeytodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monkeytodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D780432DF6B3EC00E8E5D4 /* monkeytodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monkeytodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D7804D2DF6B3EC00E8E5D4 /* monkeytodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monkeytodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				A5F9BC602DF7E24900100E9A /* AddTaskView.swift */,
+				A55D1D042DF8D3D50040CD2A /* NoItemsView.swift */,
 				A5F9BC612DF7E24900100E9A /* ListRowView.swift */,
 				A5F9BC622DF7E24900100E9A /* ListView.swift */,
 			);
@@ -299,6 +302,7 @@
 				A5F9BC6E2DF7E26500100E9A /* TodoItem.swift in Sources */,
 				A5F9BC672DF7E24900100E9A /* AddTaskView.swift in Sources */,
 				A5F9BC712DF7EBAB00100E9A /* ListViewModel.swift in Sources */,
+				A55D1D052DF8D3D80040CD2A /* NoItemsView.swift in Sources */,
 				A5F9BC682DF7E24900100E9A /* ListRowView.swift in Sources */,
 				A5F9BC692DF7E24900100E9A /* ListView.swift in Sources */,
 				A5F9BC6A2DF7E24900100E9A /* monkeytodoApp.swift in Sources */,
