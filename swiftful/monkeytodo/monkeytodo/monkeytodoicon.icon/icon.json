@@ -1,0 +1,103 @@
+{
+  "fill" : {
+    "automatic-gradient" : "display-p3:0.91799,0.83664,0.81982,1.00000"
+  },
+  "groups" : [
+    {
+      "blend-mode" : "plus-darker",
+      "blur-material" : null,
+      "hidden" : false,
+      "layers" : [
+        {
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : "automatic"
+            }
+          ],
+          "glass" : true,
+          "image-name" : "Frame 9.svg",
+          "name" : "Frame 9",
+          "opacity-specializations" : [
+            {
+              "value" : 0.2
+            },
+            {
+              "appearance" : "dark",
+              "value" : 0.8
+            }
+          ]
+        }
+      ],
+      "opacity" : 0.5,
+      "position" : {
+        "scale" : 1,
+        "translation-in-points" : [
+          -10,
+          0
+        ]
+      },
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 1
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.2
+      }
+    },
+    {
+      "layers" : [
+        {
+          "blend-mode" : "normal",
+          "fill" : {
+            "linear-gradient" : [
+              "display-p3:1.00000,0.98111,0.95886,1.00000",
+              "display-p3:0.96611,0.96128,0.91301,1.00000"
+            ]
+          },
+          "glass" : true,
+          "hidden" : false,
+          "image-name" : "Frame 7.svg",
+          "name" : "Frame 7",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "glass" : true,
+          "image-name" : "Frame 8.svg",
+          "name" : "Frame 8"
+        }
+      ],
+      "lighting" : "individual",
+      "position" : {
+        "scale" : 1,
+        "translation-in-points" : [
+          -10,
+          0
+        ]
+      },
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.4
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

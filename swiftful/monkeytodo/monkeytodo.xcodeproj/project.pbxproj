@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A55D1D052DF8D3D80040CD2A /* NoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D1D042DF8D3D50040CD2A /* NoItemsView.swift */; };
+		A55D1D0A2DF946E30040CD2A /* monkeytodoicon.icon in Resources */ = {isa = PBXBuildFile; fileRef = A55D1D092DF946E30040CD2A /* monkeytodoicon.icon */; };
+		A55D1D0C2DF947240040CD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55D1D0B2DF947240040CD2A /* LaunchScreen.storyboard */; };
+		A55D1D0D2DF947240040CD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55D1D0B2DF947240040CD2A /* LaunchScreen.storyboard */; };
 		A5F9BC672DF7E24900100E9A /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9BC602DF7E24900100E9A /* AddTaskView.swift */; };
 		A5F9BC682DF7E24900100E9A /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9BC612DF7E24900100E9A /* ListRowView.swift */; };
 		A5F9BC692DF7E24900100E9A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9BC622DF7E24900100E9A /* ListView.swift */; };
@@ -37,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		A55D1D042DF8D3D50040CD2A /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
+		A55D1D062DF9163E0040CD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A55D1D092DF946E30040CD2A /* monkeytodoicon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = monkeytodoicon.icon; sourceTree = "<group>"; };
+		A55D1D0B2DF947240040CD2A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5D780332DF6B3EA00E8E5D4 /* monkeytodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monkeytodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D780432DF6B3EC00E8E5D4 /* monkeytodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monkeytodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D7804D2DF6B3EC00E8E5D4 /* monkeytodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monkeytodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,11 +144,14 @@
 		A5F9BC662DF7E24900100E9A /* monkeytodo */ = {
 			isa = PBXGroup;
 			children = (
+				A55D1D0B2DF947240040CD2A /* LaunchScreen.storyboard */,
+				A55D1D062DF9163E0040CD2A /* Info.plist */,
 				A5F9BC6F2DF7EB8800100E9A /* ViewModel */,
 				A5F9BC632DF7E24900100E9A /* Views */,
 				A5F9BC5D2DF7E24900100E9A /* Models */,
 				A5F9BC5F2DF7E24900100E9A /* Preview Content */,
 				A5F9BC642DF7E24900100E9A /* Assets.xcassets */,
+				A55D1D092DF946E30040CD2A /* monkeytodoicon.icon */,
 				A5F9BC652DF7E24900100E9A /* monkeytodoApp.swift */,
 			);
 			path = monkeytodo;
@@ -273,6 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55D1D0A2DF946E30040CD2A /* monkeytodoicon.icon in Resources */,
+				A55D1D0D2DF947240040CD2A /* LaunchScreen.storyboard in Resources */,
 				A5F9BC6B2DF7E24900100E9A /* Preview Assets.xcassets in Resources */,
 				A5F9BC6C2DF7E24900100E9A /* Assets.xcassets in Resources */,
 			);
@@ -282,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55D1D0C2DF947240040CD2A /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +473,7 @@
 		A5D780582DF6B3EC00E8E5D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = monkeytodoicon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -469,12 +481,14 @@
 				DEVELOPMENT_TEAM = G2CVP4KJ2Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = monkeytodo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = monkeytodo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,7 +505,7 @@
 		A5D780592DF6B3EC00E8E5D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = monkeytodoicon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -499,12 +513,14 @@
 				DEVELOPMENT_TEAM = G2CVP4KJ2Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = monkeytodo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = monkeytodo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

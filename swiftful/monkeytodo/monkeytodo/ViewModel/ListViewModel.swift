@@ -47,6 +47,7 @@ import Observation
 
     func moveItem(from source: IndexSet, to destination: Int) {
         items.move(fromOffsets: source, toOffset: destination)
+        print("moved from \(source) to \(destination)")
     }
     
     func addItem(title: String) {
@@ -63,17 +64,19 @@ import Observation
 //            let title = items[index].title
 //            let isCompleted = !items[index].isCompleted
 //
-            items[index] = item.updateItem()
-            moveItemToBottom(from: index)
+            let updatedItem = item.updateItem()
+            let destination = updatedItem.isCompleted ? items.count - 1 : 0
+            items.remove(at: index)
+            items.insert(updatedItem, at: destination)
         }
     }
     
     // TODO: make this work!
-    func moveItemToBottom(from source: Int) {
-        let sourceSet = IndexSet(integer: source)
-        let destination = items.count - 1
-        moveItem(from: sourceSet, to: destination)
-    }
+//    func moveItemToBottom(from source: Int) {
+//        let sourceSet = IndexSet(integer: source)
+//        let destination = items.count - 1
+//        moveItem(from: sourceSet, to: destination)
+//    }
     
     func saveItems() {
         if let encoded = try? JSONEncoder().encode(items) {
