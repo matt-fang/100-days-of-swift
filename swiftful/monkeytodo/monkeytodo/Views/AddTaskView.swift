@@ -19,8 +19,18 @@ struct AddTaskView: View {
     var body: some View {
         Form {
             TextField("Task name", text: $taskTitle)
-            Button("Save task") {
-                saveTask()
+//            Button("Save task") {
+//                saveTask()
+//            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    saveTask()
+                } label: {
+                    Image(systemName: "checkmark")
+                }
+                .buttonStyle(.borderedProminent)
             }
         }
         .navigationTitle("Add a task")

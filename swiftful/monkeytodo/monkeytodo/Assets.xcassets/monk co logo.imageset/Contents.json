@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
-      "filename" : "Screenshot 2025-06-10 at 10.21.51 PM 4.png",
-      "idiom" : "universal",
-      "scale" : "1x"
+      "filename" : "Screenshot 2025-06-10 at 10.21.51 PM 12.png",
+      "idiom" : "universal"
     },
     {
       "appearances" : [
@@ -23,60 +12,7 @@
         }
       ],
       "filename" : "Screenshot 2025-06-10 at 10.21.51 PM 6.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
-      "filename" : "Screenshot 2025-06-10 at 10.21.51 PM 5.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "Screenshot 2025-06-10 at 10.21.51 PM 8.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
-      "filename" : "Screenshot 2025-06-10 at 10.21.51 PM 7.png",
-      "idiom" : "universal",
-      "scale" : "3x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "Screenshot 2025-06-10 at 10.21.51 PM 9.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {
