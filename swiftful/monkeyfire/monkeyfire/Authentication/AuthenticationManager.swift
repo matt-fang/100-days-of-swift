@@ -48,6 +48,8 @@ final class AuthenticationManager {
         return AuthDataResultModel(user: user)
     }
 
+    // TODO: is the whole point of discardableResult to get rid of warnings when you don't use a function's return (SOMETIMES)?
+    @discardableResult
     func createUser(email: String, password: String) async throws -> AuthDataResultModel {
         let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
         let result = AuthDataResultModel(user: authDataResult.user)
@@ -55,10 +57,37 @@ final class AuthenticationManager {
         return result
     }
 
+    @discardableResult
+    func signInUser(email: String, password: String) async throws -> AuthDataResultModel {
+        let authDataResult = try await Auth.auth().signIn(withEmail: email, password: password)
+        return AuthDataResultModel(user: authDataResult.user)
+    }
+
     // MARK: Auth.auth().signOut() is a THROWING function, so we have to mark it with try
 
     // MARK: but since we marked OUR function with throws, we pass on the catching-responsibility one level up
 
+    func resetPassword(email: String) async throws {
+        try await Auth.auth().sendPasswordReset(withEmail: email)
+    }
+    
+    func updatePassword(password: String) async throws {
+        guard let user = Auth.auth().currentUser else {
+            throw URLError(.badServerResponse)
+        }
+        
+        try await user.updatePassword(to: password)
+    }
+    
+    func updateEmail(email: String) async throws {
+        guard let user = Auth.auth().currentUser else {
+            throw URLError(.badServerResponse)
+        }
+        
+        try await user.sendEmailVerification(beforeUpdatingEmail: email)
+    }
+
+    // MARK: SIGN OUT IS IMMEDIATE! one of the only non-async functions in firebase (for good reason!)
     func signOut() throws {
         try Auth.auth().signOut()
     }

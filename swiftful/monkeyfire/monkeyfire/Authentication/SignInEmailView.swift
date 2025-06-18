@@ -10,32 +10,40 @@ import SwiftUI
 
 // TODO: LEARN CONCURRENCY LEARN CONCURRENCY LEARN CONCURRENCY!
 
+enum signInError: Error {
+    case emptyEmailOrPassword
+    case invalidPassword
+}
+
 @MainActor
 @Observable
 final class SignInEmailViewModel {
     var email = ""
     var password = ""
     
-    func signIn() {
+    var alertIsShown: Bool = false
+    var alertMessage: String = ""
+    
+    func signUp() async throws {
         guard !email.isEmpty, !password.isEmpty else {
-            print("no password or email!")
-            return
+            throw signInError.emptyEmailOrPassword
         }
         
-        Task {
-            do {
-                let returnedUserData = try await AuthenticationManager.shared.createUser(email: email, password: password)
-                print("success \(returnedUserData)")
-            } catch {
-                print("Error")
-            }
+        try await AuthenticationManager.shared.createUser(email: email, password: password)
+    }
+    
+    func signIn() async throws {
+        guard !email.isEmpty, !password.isEmpty else {
+            throw signInError.emptyEmailOrPassword
         }
         
+        try await AuthenticationManager.shared.signInUser(email: email, password: password)
     }
 }
 
 struct SignInEmailView: View {
     @State private var viewModel = SignInEmailViewModel()
+    @Binding var showSignInView: Bool
     
     var body: some View {
         VStack {
@@ -50,7 +58,33 @@ struct SignInEmailView: View {
                 .background(.thinMaterial)
                 .cornerRadius(10)
             Button {
-                viewModel.signIn()
+                Task {
+                    do {
+                        try await viewModel.signUp()
+                        showSignInView = false
+                        print("signed up!")
+                        return
+                    } catch signInError.emptyEmailOrPassword {
+                        viewModel.alertMessage = "Please enter both an email and a password!"
+                        viewModel.alertIsShown = true
+                    } catch {
+                        print("sign in failed")
+                    }
+                    
+                    do {
+                        try await viewModel.signIn()
+                        showSignInView = false
+                        print("signed in!")
+                        return
+                    } catch signInError.emptyEmailOrPassword {
+                        viewModel.alertMessage = "Please enter both an email and a password!"
+                        viewModel.alertIsShown = true
+                    } catch {
+                        viewModel.alertMessage = "Your password was incorrect! Please try again."
+                        viewModel.alertIsShown = true
+                    }
+                }
+                
             } label: {
                 Text("Sign In With Email")
                     .font(.headline)
@@ -62,6 +96,11 @@ struct SignInEmailView: View {
             }
         }
         .padding()
+        .alert("attention!", isPresented: $viewModel.alertIsShown) {
+            Button("ok", role: .cancel) {}
+        } message: {
+            Text(viewModel.alertMessage)
+        }
         .navigationTitle("Sign In with Email")
         
         Spacer()
@@ -70,6 +109,6 @@ struct SignInEmailView: View {
 
 #Preview {
     NavigationStack {
-        SignInEmailView()
+        SignInEmailView(showSignInView: .constant(true))
     }
 }

@@ -20,9 +20,10 @@ struct RootView: View {
             let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
             self.showSignInView = authUser == nil
         }
+        // MARK: you can pass + modify a isPresented binding instead of using Environment dismiss! (at least for temporary views like sign in)
         .fullScreenCover(isPresented: $showSignInView) {
             NavigationStack {
-                AuthenticationView()
+                AuthenticationView(showSignInView: $showSignInView)
             }
         }
     }
