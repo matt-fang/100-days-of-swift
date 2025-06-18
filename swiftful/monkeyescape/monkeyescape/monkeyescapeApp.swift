@@ -11,7 +11,7 @@ import SwiftUI
 struct monkeyescapeApp: App {
     var body: some Scene {
         WindowGroup {
-            CodableDecodable()
+            DownloadImageAsync()
         }
     }
 }
