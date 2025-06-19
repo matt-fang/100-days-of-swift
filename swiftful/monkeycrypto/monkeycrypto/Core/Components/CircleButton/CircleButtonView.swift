@@ -35,9 +35,6 @@ struct CircleButtonView: View {
         }
         .frame(width: !isExpanded ? 50 : 150, height: 50)
         .animation(.spring(duration: 0.5, bounce: 0.4), value: isExpanded)
-        .onTapGesture {
-            isExpanded.toggle()
-        }
     }
 }
 

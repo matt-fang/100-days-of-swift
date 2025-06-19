@@ -6,6 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A5CE1BC52E03CA00006E2D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CE1BC12E03CA00006E2D50 /* Assets.xcassets */; };
+		A5CE1BC62E03CA00006E2D50 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BB32E03CA00006E2D50 /* CircleButtonView.swift */; };
+		A5CE1BC72E03CA00006E2D50 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BB62E03CA00006E2D50 /* CoinRowView.swift */; };
+		A5CE1BC82E03CA00006E2D50 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BB72E03CA00006E2D50 /* HomeView.swift */; };
+		A5CE1BC92E03CA00006E2D50 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BBB2E03CA00006E2D50 /* DataLoader.swift */; };
+		A5CE1BCA2E03CA00006E2D50 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BBD2E03CA00006E2D50 /* Color.swift */; };
+		A5CE1BCB2E03CA00006E2D50 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BBF2E03CA00006E2D50 /* CoinModel.swift */; };
+		A5CE1BCD2E03CA00006E2D50 /* monkeycryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BC32E03CA00006E2D50 /* monkeycryptoApp.swift */; };
+		A5CE1BCF2E03D00F006E2D50 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BCE2E03D00F006E2D50 /* Double.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A5CE1AF92E00EE9D006E2D50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +39,18 @@
 		A5CE1AEB2E00EE9C006E2D50 /* monkeycrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monkeycrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CE1AF82E00EE9D006E2D50 /* monkeycryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monkeycryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CE1B022E00EE9E006E2D50 /* monkeycryptoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monkeycryptoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CE1BB32E03CA00006E2D50 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		A5CE1BB62E03CA00006E2D50 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
+		A5CE1BB72E03CA00006E2D50 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A5CE1BBB2E03CA00006E2D50 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		A5CE1BBD2E03CA00006E2D50 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A5CE1BBF2E03CA00006E2D50 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		A5CE1BC12E03CA00006E2D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5CE1BC32E03CA00006E2D50 /* monkeycryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monkeycryptoApp.swift; sourceTree = "<group>"; };
+		A5CE1BCE2E03D00F006E2D50 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A5CE1AED2E00EE9C006E2D50 /* monkeycrypto */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = monkeycrypto;
-			sourceTree = "<group>";
-		};
 		A5CE1AFB2E00EE9E006E2D50 /* monkeycryptoTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = monkeycryptoTests;
@@ -75,7 +91,7 @@
 		A5CE1AE22E00EE9C006E2D50 = {
 			isa = PBXGroup;
 			children = (
-				A5CE1AED2E00EE9C006E2D50 /* monkeycrypto */,
+				A5CE1BC42E03CA00006E2D50 /* monkeycrypto */,
 				A5CE1AFB2E00EE9E006E2D50 /* monkeycryptoTests */,
 				A5CE1B052E00EE9E006E2D50 /* monkeycryptoUITests */,
 				A5CE1AEC2E00EE9C006E2D50 /* Products */,
@@ -92,6 +108,86 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A5CE1BB42E03CA00006E2D50 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BB32E03CA00006E2D50 /* CircleButtonView.swift */,
+			);
+			path = CircleButton;
+			sourceTree = "<group>";
+		};
+		A5CE1BB52E03CA00006E2D50 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BB42E03CA00006E2D50 /* CircleButton */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A5CE1BB82E03CA00006E2D50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BB62E03CA00006E2D50 /* CoinRowView.swift */,
+				A5CE1BB72E03CA00006E2D50 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5CE1BB92E03CA00006E2D50 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BB82E03CA00006E2D50 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A5CE1BBA2E03CA00006E2D50 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BB52E03CA00006E2D50 /* Components */,
+				A5CE1BB92E03CA00006E2D50 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A5CE1BBC2E03CA00006E2D50 /* Developer */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BBB2E03CA00006E2D50 /* DataLoader.swift */,
+			);
+			path = Developer;
+			sourceTree = "<group>";
+		};
+		A5CE1BBE2E03CA00006E2D50 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BBD2E03CA00006E2D50 /* Color.swift */,
+				A5CE1BCE2E03D00F006E2D50 /* Double.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5CE1BC02E03CA00006E2D50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BBF2E03CA00006E2D50 /* CoinModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A5CE1BC42E03CA00006E2D50 /* monkeycrypto */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BC32E03CA00006E2D50 /* monkeycryptoApp.swift */,
+				A5CE1BBA2E03CA00006E2D50 /* Core */,
+				A5CE1BC02E03CA00006E2D50 /* Models */,
+				A5CE1BBE2E03CA00006E2D50 /* Extensions */,
+				A5CE1BC12E03CA00006E2D50 /* Assets.xcassets */,
+				A5CE1BBC2E03CA00006E2D50 /* Developer */,
+			);
+			path = monkeycrypto;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +202,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				A5CE1AED2E00EE9C006E2D50 /* monkeycrypto */,
 			);
 			name = monkeycrypto;
 			packageProductDependencies = (
@@ -212,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5CE1BC52E03CA00006E2D50 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5CE1BC62E03CA00006E2D50 /* CircleButtonView.swift in Sources */,
+				A5CE1BC72E03CA00006E2D50 /* CoinRowView.swift in Sources */,
+				A5CE1BCF2E03D00F006E2D50 /* Double.swift in Sources */,
+				A5CE1BC82E03CA00006E2D50 /* HomeView.swift in Sources */,
+				A5CE1BC92E03CA00006E2D50 /* DataLoader.swift in Sources */,
+				A5CE1BCA2E03CA00006E2D50 /* Color.swift in Sources */,
+				A5CE1BCB2E03CA00006E2D50 /* CoinModel.swift in Sources */,
+				A5CE1BCD2E03CA00006E2D50 /* monkeycryptoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +507,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,6 +539,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

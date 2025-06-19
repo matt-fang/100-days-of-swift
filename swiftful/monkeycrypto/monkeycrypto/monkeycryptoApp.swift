@@ -11,7 +11,7 @@ import SwiftUI
 struct monkeycryptoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
