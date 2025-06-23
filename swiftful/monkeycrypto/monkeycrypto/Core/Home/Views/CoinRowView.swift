@@ -32,7 +32,7 @@ struct CoinRowView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    CoinRowView(coin: .mock)
+    CoinRowView(coin: .dev)
 }
 
 extension CoinRowView {

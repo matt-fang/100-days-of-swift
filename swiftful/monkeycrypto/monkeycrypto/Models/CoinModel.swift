@@ -124,7 +124,7 @@ struct Coin: Identifiable, Codable {
     }
     
     // MARK: static variables belong to the TYPE, not an INSTANCE — this means you can access Coin.mock WITHOUT INITIALIZING A COIN()! — just do Coin.mock anywhere in your project!
-    static let mock = Coin(
+    static let dev = Coin(
         id: "bitcoin",
         symbol: "btc",
         name: "Bitcoin",

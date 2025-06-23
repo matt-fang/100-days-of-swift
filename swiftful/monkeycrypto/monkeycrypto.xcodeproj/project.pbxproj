@@ -16,6 +16,8 @@
 		A5CE1BCB2E03CA00006E2D50 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BBF2E03CA00006E2D50 /* CoinModel.swift */; };
 		A5CE1BCD2E03CA00006E2D50 /* monkeycryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BC32E03CA00006E2D50 /* monkeycryptoApp.swift */; };
 		A5CE1BCF2E03D00F006E2D50 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BCE2E03D00F006E2D50 /* Double.swift */; };
+		A5CE1BE22E092781006E2D50 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BE12E092781006E2D50 /* HomeViewModel.swift */; };
+		A5CE1BE62E092EC4006E2D50 /* CoinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CE1BE52E092EC4006E2D50 /* CoinListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		A5CE1BC12E03CA00006E2D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5CE1BC32E03CA00006E2D50 /* monkeycryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monkeycryptoApp.swift; sourceTree = "<group>"; };
 		A5CE1BCE2E03D00F006E2D50 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		A5CE1BE12E092781006E2D50 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A5CE1BE52E092EC4006E2D50 /* CoinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -119,6 +123,7 @@
 		A5CE1BB52E03CA00006E2D50 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A5CE1BE42E092EB9006E2D50 /* CoinList */,
 				A5CE1BB42E03CA00006E2D50 /* CircleButton */,
 			);
 			path = Components;
@@ -136,6 +141,7 @@
 		A5CE1BB92E03CA00006E2D50 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A5CE1BDE2E09276B006E2D50 /* ViewModels */,
 				A5CE1BB82E03CA00006E2D50 /* Views */,
 			);
 			path = Home;
@@ -186,6 +192,23 @@
 				A5CE1BBC2E03CA00006E2D50 /* Developer */,
 			);
 			path = monkeycrypto;
+			sourceTree = "<group>";
+		};
+		A5CE1BDE2E09276B006E2D50 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BE12E092781006E2D50 /* HomeViewModel.swift */,
+			);
+			name = ViewModels;
+			path = monkeycrypto/Core/Home/ViewModels;
+			sourceTree = SOURCE_ROOT;
+		};
+		A5CE1BE42E092EB9006E2D50 /* CoinList */ = {
+			isa = PBXGroup;
+			children = (
+				A5CE1BE52E092EC4006E2D50 /* CoinListView.swift */,
+			);
+			path = CoinList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,9 +354,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5CE1BC62E03CA00006E2D50 /* CircleButtonView.swift in Sources */,
+				A5CE1BE22E092781006E2D50 /* HomeViewModel.swift in Sources */,
 				A5CE1BC72E03CA00006E2D50 /* CoinRowView.swift in Sources */,
 				A5CE1BCF2E03D00F006E2D50 /* Double.swift in Sources */,
 				A5CE1BC82E03CA00006E2D50 /* HomeView.swift in Sources */,
+				A5CE1BE62E092EC4006E2D50 /* CoinListView.swift in Sources */,
 				A5CE1BC92E03CA00006E2D50 /* DataLoader.swift in Sources */,
 				A5CE1BCA2E03CA00006E2D50 /* Color.swift in Sources */,
 				A5CE1BCB2E03CA00006E2D50 /* CoinModel.swift in Sources */,

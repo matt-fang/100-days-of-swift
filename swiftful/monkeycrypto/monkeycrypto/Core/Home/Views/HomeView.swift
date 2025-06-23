@@ -8,32 +8,31 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(HomeViewModel.self) private var viewModel
     @State private var showPortfolio: Bool = false
 
     var body: some View {
         ZStack(alignment: .top) {
             // content
-            
-            List {
-                Color.clear
-                    .frame(height: 50)
-                ForEach(0 ..< 100) { _ in
-                    CoinRowView(coin: .mock)
+            VStack {
+                if !showPortfolio {
+                    CoinListView(coins: viewModel.allCoins, direction: .leading, showPortfolio: $showPortfolio)
+                } else {
+                    CoinListView(coins: viewModel.portfolioCoins, direction: .trailing, showPortfolio: $showPortfolio)
                 }
             }
-            .listStyle(.inset)
-            .scrollEdgeEffectStyle(.soft, for: .all)
 
             header
                 .padding(.horizontal)
         }
+        .animation(.spring, value: showPortfolio)
     }
 }
 
 #Preview {
     NavigationStack {
         HomeView()
-    }
+    }.environment(HomeViewModel())
 }
 
 extension HomeView {
@@ -47,13 +46,13 @@ extension HomeView {
 
             if !showPortfolio {
                 Text("live prices")
-                    .transition(.move(edge: .leading).combined(with: .opacity))
+                    .transition(.move(edge: .leading).combined(with: .blurReplace))
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundStyle(Color.theme.accent)
             } else {
                 Text("portfolio")
-                    .transition(.move(edge: .trailing).combined(with: .opacity))
+                    .transition(.move(edge: .trailing).combined(with: .blurReplace))
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundStyle(Color.theme.accent)

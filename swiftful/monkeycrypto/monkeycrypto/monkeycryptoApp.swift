@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct monkeycryptoApp: App {
+    
+    @State private var viewModel = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
         }
+        .environment(viewModel)
     }
 }
