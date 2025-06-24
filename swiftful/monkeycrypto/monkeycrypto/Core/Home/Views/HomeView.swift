@@ -16,9 +16,9 @@ struct HomeView: View {
             // content
             VStack {
                 if !showPortfolio {
-                    CoinListView(coins: viewModel.allCoins, direction: .leading, showPortfolio: $showPortfolio)
+                    CoinListView(coins: viewModel.allCoins, direction: .leading, showPortfolio: false)
                 } else {
-                    CoinListView(coins: viewModel.portfolioCoins, direction: .trailing, showPortfolio: $showPortfolio)
+                    CoinListView(coins: viewModel.portfolioCoins, direction: .trailing, showPortfolio: true)
                 }
             }
 

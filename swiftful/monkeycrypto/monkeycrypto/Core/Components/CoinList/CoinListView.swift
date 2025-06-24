@@ -10,7 +10,7 @@ import SwiftUI
 struct CoinListView: View {
     var coins: [Coin]
     var direction: Edge
-    @Binding var showPortfolio: Bool
+    var showPortfolio: Bool
     
     var body: some View {
         List {

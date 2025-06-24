@@ -9,14 +9,24 @@ import Foundation
 import Observation
 
 @Observable class HomeViewModel {
+    private let service: CoinDataService = CoinDataService()
     var allCoins: [Coin] = []
     var portfolioCoins: [Coin] = []
     
     init() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.allCoins.append(Coin.dev)
-            self.portfolioCoins.append(Coin.dev)
-            self.portfolioCoins.append(Coin.dev)
+        observeService()
+    }
+    
+    private func observeService() {
+        Task {
+            do {
+                let stream = try await service.getCoins()
+                for await coin in stream {
+                    self.allCoins.append(coin)
+                }
+            } catch {
+                print("error:", error)
+            }
         }
     }
 }
