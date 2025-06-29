@@ -28,6 +28,11 @@ struct AuthDataResultModel {
     }
 }
 
+enum AuthProviderOption: String {
+    case email = "password"
+    case google = "google.com"
+}
+
 // TODO: LEARN DEPENDENCY INJETIOPN
 final class AuthenticationManager {
     static let shared = AuthenticationManager()
@@ -48,6 +53,35 @@ final class AuthenticationManager {
         return AuthDataResultModel(user: user)
     }
 
+    func getProvider() throws -> [AuthProviderOption] {
+        guard let providerData = Auth.auth().currentUser?.providerData
+        else {
+            throw URLError(.badServerResponse)
+        }
+
+        var providers: [AuthProviderOption] = []
+
+        for provider in providerData {
+            if let providerOption = AuthProviderOption(rawValue: provider.providerID) {
+                providers.append(providerOption)
+                print(providerOption)
+            } else {
+                assertionFailure("provider option not found: \(provider.providerID)")
+            }
+        }
+        return providers
+    }
+
+    // MARK: SIGN OUT IS IMMEDIATE! one of the only non-async functions in firebase (for good reason!)
+
+    func signOut() throws {
+        try Auth.auth().signOut()
+    }
+}
+
+// MARK: SIGN IN EMAIL
+
+extension AuthenticationManager {
     // TODO: is the whole point of discardableResult to get rid of warnings when you don't use a function's return (SOMETIMES)?
     @discardableResult
     func createUser(email: String, password: String) async throws -> AuthDataResultModel {
@@ -70,25 +104,35 @@ final class AuthenticationManager {
     func resetPassword(email: String) async throws {
         try await Auth.auth().sendPasswordReset(withEmail: email)
     }
-    
+
     func updatePassword(password: String) async throws {
         guard let user = Auth.auth().currentUser else {
             throw URLError(.badServerResponse)
         }
-        
+
         try await user.updatePassword(to: password)
     }
-    
+
     func updateEmail(email: String) async throws {
         guard let user = Auth.auth().currentUser else {
             throw URLError(.badServerResponse)
         }
-        
+
         try await user.sendEmailVerification(beforeUpdatingEmail: email)
     }
+}
 
-    // MARK: SIGN OUT IS IMMEDIATE! one of the only non-async functions in firebase (for good reason!)
-    func signOut() throws {
-        try Auth.auth().signOut()
+// MARK: SIGN IN SSO
+
+extension AuthenticationManager {
+    @discardableResult
+    func signInWithGoogle(tokens: GoogleSignInResultModel) async throws -> AuthDataResultModel {
+        let credential = GoogleAuthProvider.credential(withIDToken: tokens.idToken, accessToken: tokens.accessToken)
+        return try await signIn(credential: credential)
+    }
+
+    func signIn(credential: AuthCredential) async throws -> AuthDataResultModel {
+        let authDataResult = try await Auth.auth().signIn(with: credential)
+        return AuthDataResultModel(user: authDataResult.user)
     }
 }
