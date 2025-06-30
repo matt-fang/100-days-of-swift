@@ -5,7 +5,6 @@
 //  Created by Matthew Fang on 6/4/25.
 //
 
-import Observation
 import SwiftUI
 
 // TODO: LEARN CONCURRENCY LEARN CONCURRENCY LEARN CONCURRENCY!
@@ -15,31 +14,7 @@ enum signInError: Error {
     case invalidPassword
 }
 
-@MainActor
-@Observable
-final class SignInEmailViewModel {
-    var email = ""
-    var password = ""
-    
-    var alertIsShown: Bool = false
-    var alertMessage: String = ""
-    
-    func signUp() async throws {
-        guard !email.isEmpty, !password.isEmpty else {
-            throw signInError.emptyEmailOrPassword
-        }
-        
-        try await AuthenticationManager.shared.createUser(email: email, password: password)
-    }
-    
-    func signIn() async throws {
-        guard !email.isEmpty, !password.isEmpty else {
-            throw signInError.emptyEmailOrPassword
-        }
-        
-        try await AuthenticationManager.shared.signInUser(email: email, password: password)
-    }
-}
+
 
 struct SignInEmailView: View {
     @State private var viewModel = SignInEmailViewModel()

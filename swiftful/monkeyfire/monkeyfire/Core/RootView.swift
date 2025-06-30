@@ -14,7 +14,8 @@ struct RootView: View {
     var body: some View {
         ZStack {
             NavigationStack {
-                SettingsView(showSignInView: $showSignInView, username: $username)
+                ProfileView(showSignInView: $showSignInView)
+//                SettingsView(showSignInView: $showSignInView, username: $username)
             }
         }
         .onAppear {

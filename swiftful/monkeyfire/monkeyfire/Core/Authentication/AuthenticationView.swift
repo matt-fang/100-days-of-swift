@@ -9,21 +9,6 @@ import GoogleSignIn
 import GoogleSignInSwift
 import SwiftUI
 
-// TODO: UNDERSTAND MAIN ACFTOR
-@MainActor
-final class AuthenticationViewModel {
-    func signInGoogle() async throws -> GoogleSignInResultModel {
-//        let helper = SignInGoogleHelper()
-        let tokens = try await SignInGoogleHelper.signIn()
-
-        // MARK: always bundle API results (AuthDataResult, GoogleSignInResult, etc) into a convenient model struct!!!
-
-        try await AuthenticationManager.shared.signInWithGoogle(tokens: tokens)
-        
-        return tokens
-    }
-}
-
 struct AuthenticationView: View {
     @State var viewModel = AuthenticationViewModel()
     @Binding var showSignInView: Bool
